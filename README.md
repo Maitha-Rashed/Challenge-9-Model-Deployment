@@ -111,9 +111,6 @@ A `Sample Images` folder is included in the project to provide example images th
 - On the free hosted version, the first request after inactivity may be delayed because the service needs to restart
 
 ## App Preview
-
-Add a screenshot or GIF of the application here.
-
 Example:
 
 ![App Preview](assets/app_preview.png)

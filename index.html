@@ -1,0 +1,52 @@
+<!DOCTYPE html> <!--Declaring that this document is an HTML5 file-->
+<html lang="en"> <!--Setting the language to English-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BottleCan Vision</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> <!--Linking the HTML page to the CSS file stored in the static folder-->
+</head>
+<body>
+
+    <div class="container">
+        <div class="header"> <!--Header section containing the app title and description-->
+            <h1>♻ Plastic Bottle & Soda Can Detector</h1>
+            <p>
+                A simple computer vision tool for detecting plastic bottles and soda cans.
+            </p>
+        </div>
+
+        <div class="upload-card"> <!--Card section for uploading the image and showing instructions-->
+            <p class="instruction-text">
+                 Choose an image, then click <strong>Detect Object</strong> to view the prediction.
+            </p>
+
+            <form action="/predict" method="post" enctype="multipart/form-data"> <!--Form that sends the uploaded image to the /predict route-->
+                <label for="image" class="custom-file-upload">Step 1: Choose Image</label>
+                <input type="file" id="image" name="image" accept="image/*" required> <!--File input that allows the user to upload an image only-->
+                <button type="submit">Step 2: Detect Object</button> <!--Button that submits the form and starts detection-->
+            </form>
+        </div>
+
+        {% if uploaded_image or output_image %} <!--Checks if there is an uploaded image or prediction result to display-->
+        <div class="results-section">
+            {% if uploaded_image %}
+            <div class="image-card">
+                <h2>Uploaded Image</h2>
+                <img src="{{ uploaded_image }}" alt="Uploaded Image"> <!--Displaying the uploaded image-->
+            </div>
+            {% endif %}
+
+            {% if output_image %}
+            <div class="image-card"> <!--Checks if the predicted output image exists-->
+                <h2>Detection Result</h2>
+                <img src="{{ output_image }}" alt="Detection Result"> <!--Displays the detected image with bounding boxes-->
+            </div>
+            </div>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+
+</body>
+</html>

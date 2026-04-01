@@ -1,0 +1,110 @@
+body {
+    margin: 0; /*Removing the default margin around the page*/
+    font-family: Arial, sans-serif; /*Setting the main font style for the whole page*/
+    background: linear-gradient(to bottom right, #e8f5e9, #f1f8e9); /*Adding a soft green gradient background*/
+    color: #1b4332; /*Setting the default text color*/
+}
+
+.container {
+    max-width: 1100px; /*Keeping the page content centered and not too wide*/
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.header {
+    text-align: center; /*Centering the title and description*/
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+    color: #2d6a4f;
+}
+
+.header p {
+    font-size: 18px;
+    color: #344e41;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.upload-card {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+input[type="file"] {
+    display: none; /*Hiding the default file input so the custom button is used instead*/
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #95d5b2;
+    color: #1b4332;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 12px;
+    transition: 0.3s;
+}
+
+.custom-file-upload:hover {
+    background-color: #74c69d;
+}
+
+button {
+    padding: 12px 22px;
+    background-color: #2d6a4f;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #1b4332;
+}
+
+.results-section {
+    display: flex; /*Placing the uploaded image and detection result side by side*/
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.image-card {
+    background: white;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 480px; /*Giving both image sections a balanced fixed width*/
+    text-align: center;
+}
+
+.image-card h2 {
+    margin-bottom: 15px;
+    color: #2d6a4f;
+}
+
+.image-card img {
+    max-width: 100%; /*Making sure the image fits inside the card properly*/
+    border-radius: 12px;
+    border: 3px solid #d8f3dc;
+}
+
+.instruction-text {
+    font-size: 17px;
+    color: #344e41;
+    margin-bottom: 18px;
+    text-align: center;
+}

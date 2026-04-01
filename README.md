@@ -45,7 +45,7 @@ Challenge-9-Model-Deployment/
 │   └── index.html
 ├── static/
 │   └── style.css
-├── test_images/
+├── Sample Images/
 ├── assets/
 │   └── app_preview.png
 └── README.md
@@ -98,7 +98,7 @@ The deployed application is available at:
 
 ## Test Images
 
-A `test_images` folder is included in the project to provide example images that can be used to test the application.
+A `Sample Images` folder is included in the project to provide example images that can be used to test the application.
 
 ## Known Issues / Limitations
 
